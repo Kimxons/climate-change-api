@@ -4,13 +4,17 @@ const cheerio = require('cheerio')
 const { response } = require('express')
 const compression = require('compression')
 
+const helmet =require('helmet')
+
 const PORT = 8000
 
 //Express application object
 const app = express()
 
 //Compressing all routes
-app.use(compression())
+app.use(compression()) // gzip?
+
+app.use(helmet()) //app.disable('x-powered-by')
 
 const newspapers = [
   {
@@ -84,7 +88,7 @@ app.get('/', (req, res) => {
   res.json('Climate News API')
 })
 
-app.get('/climate', (req, res) => {
+app.get('/climatenews', (req, res) => {
   res.json(articles)
 })
 
