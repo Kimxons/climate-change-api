@@ -1,7 +1,10 @@
 {
   "name": "climate-change-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "API to get climate news across the globe",
+  "engines": {
+    "node": "12.21.0"
+  },
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
@@ -11,6 +14,7 @@
   "dependencies": {
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "nodemon": "^2.0.14"
   }

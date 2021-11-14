@@ -1,12 +1,28 @@
-const PORT = 8000
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
 const { response } = require('express')
+const compression = require('compression')
 
+const PORT = 8000
+
+//Express application object
 const app = express()
 
+//Compressing all routes
+app.use(compression())
+
 const newspapers = [
+  {
+    name: 'skynews',
+    address: 'https://news.sky.com/climate',
+    base: 'https://news.sky.com/',
+  },
+  {
+    name: 'aljazeera',
+    address: 'https://www.aljazeera.com/tag/climate/',
+    base: 'https://www.aljazeera.com/'
+  },
   {
     name: 'thetimes',
     address: 'https://www.thetimes.co.uk/environment/climate-change',
@@ -22,6 +38,26 @@ const newspapers = [
     address: 'https://www.telegraph.co.uk/climate-change/',
     base: 'https://www.telegraph.co.uk',
   },
+  {
+    name: 'insideclimatenews',
+    address: 'https://insideclimatenews.org/todaysclimate/',
+    base: 'https://insideclimatenews.org/',
+  },
+  {
+    name: 'climatechangenews',
+    address: 'https://www.climatechangenews.com/news/',
+    base: 'https://www.climatechangenews.com/news/',
+  },
+  {
+    name: 'dailyclimate',
+    address: 'https://www.dailyclimate.org/',
+    base: 'https://www.dailyclimate.org/',
+  },
+  {
+    name: 'bbc',
+    address: 'https://www.bbc.com/news/science-environment-56837908',
+    base: 'https://www.bbc.com/news/',
+  }
 ]
 
 const articles = []
