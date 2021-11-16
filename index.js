@@ -18,49 +18,54 @@ app.use(helmet()) //app.disable('x-powered-by')
 
 const newspapers = [
   {
-    name: 'skynews',
-    address: 'https://news.sky.com/climate',
-    base: 'https://news.sky.com/',
-  },
-  {
-    name: 'aljazeera',
+    name: 'Aljazeera',
     address: 'https://www.aljazeera.com/tag/climate/',
-    base: 'https://www.aljazeera.com/'
+    base: 'https://www.aljazeera.com'
   },
   {
-    name: 'thetimes',
+    name: 'Skynews',
+    address: 'https://news.sky.com/climate',
+    base: 'https://news.sky.com',
+  },
+  {
+    name: 'cnbc',
+    address: 'https://www.cnbc.com/climate/',
+    base: '',
+  },
+  {
+    name: 'The Times',
     address: 'https://www.thetimes.co.uk/environment/climate-change',
     base: '',
   },
   {
-    name: 'guardian',
+    name: 'Guardian',
     address: 'https://www.theguardian.com/environment/climate-crisis',
     base: '',
   },
   {
-    name: 'telegragh',
+    name: 'Telegragh',
     address: 'https://www.telegraph.co.uk/climate-change/',
     base: 'https://www.telegraph.co.uk',
   },
   {
-    name: 'insideclimatenews',
+    name: 'Insideclimatenews',
     address: 'https://insideclimatenews.org/todaysclimate/',
-    base: 'https://insideclimatenews.org/',
+    base: 'https://insideclimatenews.org',
   },
   {
-    name: 'climatechangenews',
+    name: 'Climatechangenews',
     address: 'https://www.climatechangenews.com/news/',
-    base: 'https://www.climatechangenews.com/news/',
+    base: '',
   },
   {
-    name: 'dailyclimate',
+    name: 'Dailyclimate',
     address: 'https://www.dailyclimate.org/',
-    base: 'https://www.dailyclimate.org/',
+    base: 'https://www.dailyclimate.org',
   },
   {
-    name: 'bbc',
+    name: 'BBC',
     address: 'https://www.bbc.com/news/science-environment-56837908',
-    base: 'https://www.bbc.com/news/',
+    base: 'https://www.bbc.com',
   }
 ]
 

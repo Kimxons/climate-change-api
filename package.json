@@ -7,7 +7,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "snyk test"
   },
   "author": "kimxons",
   "license": "ISC",
@@ -18,5 +19,8 @@
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "nodemon": "^2.0.14"
+  },
+  "devDependencies": {
+    "snyk": "^1.760.0"
   }
 }
