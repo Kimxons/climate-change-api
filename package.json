@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "API to get climate news across the globe",
   "engines": {
-    "node": "12.21.0"
+    "node": "12.22.5"
   },
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "test": "snyk test"
   },
   "author": "kimxons",
-  "license": "ISC",
+  "license": "WTFPL",
   "dependencies": {
     "axios": "^0.24.0",
     "cheerio": "^1.0.0-rc.10",
@@ -21,6 +21,6 @@
     "nodemon": "^2.0.14"
   },
   "devDependencies": {
-    "snyk": "^1.760.0"
+    "snyk": "^1.826.0"
   }
 }
